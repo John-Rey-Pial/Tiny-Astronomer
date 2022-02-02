@@ -51,6 +51,7 @@
                 </li>
               </ul>
             </nav>
+            <v-btn class="indigo white--text mt-7 ml-16">Logout</v-btn>
           </v-card>
 
           <div>
