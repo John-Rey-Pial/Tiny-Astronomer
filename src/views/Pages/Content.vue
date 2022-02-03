@@ -14,8 +14,11 @@
         <v-btn
           class="indigo darken-4 white--text"
           style="text-transform: capitalize; width: 240px;"
+          @click="$router.push('/solar')"
         >Start Course</v-btn>
-        <section style="font-size: 11px; margin-top: 10px">Take an expedition across our neighbouring giants.</section>
+        <section
+          style="font-size: 11px; margin-top: 10px"
+        >Take an expedition across our neighbouring giants.</section>
       </div>
       <div style="margin-left: 200px">
         <section style="text-align: center; margin-top: 20px; margin-bottom: 10px">
@@ -30,9 +33,11 @@
         <v-btn
           class="indigo darken-4 white--text"
           style="text-transform: capitalize; width: 240px;"
-        @click="$router.push('/motions')"
+          @click="$router.push('/motions')"
         >Start Course</v-btn>
-        <section style="font-size: 11px; margin-top: 10px">Learn how our planet rotates and revolves.</section>
+        <section
+          style="font-size: 11px; margin-top: 10px"
+        >Learn how our planet rotates and revolves.</section>
       </div>
     </div>
   </div>

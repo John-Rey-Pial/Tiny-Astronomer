@@ -15,7 +15,7 @@
       <span class="ml-10 caption" style="color: gray">Source: &copy; Peekaboo Kidz, 2020</span>
     </div>
     <div>
-      <section class="mt-5 ml-15" style="font-size: 24px;">
+      <section class="mt-5 ml-9" style="font-size: 24px;">
         <strong>Earth's Rotation and Revolution</strong>
       </section>
       <section class="mt-10">

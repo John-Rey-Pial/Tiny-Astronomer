@@ -6,12 +6,12 @@
           <strong>Question 4 out of 15</strong>
         </section>
         <v-spacer style="margin-bottom: 20px"></v-spacer>
-        <div class="question">Day and night are caused by the earth’s ________.  </div>
+        <div class="question">What do we call the movement when the earth orbit around the sun?   </div>
         <nav>
           <ul>
-            <li>Axis</li>
             <li>Rotation</li>
-            <li>Season</li>
+            <li>Axis</li>
+            <li>Revolution</li>
           </ul>
         </nav>
         <div style="margin-left: 530px;">
