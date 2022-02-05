@@ -12,7 +12,10 @@
     </div>
     <v-btn
       style="text-transform: capitalize; margin-left: 5%; margin-top: 2%; background: purple; color: white; width: 200px"
-    >Take a Survey</v-btn>
+    onclick="location.href='https://forms.gle/TqwcYzjEMxKHmA6u9';" 
+    >
+    Take a Survey
+    </v-btn>
   </div>
 </template>
 <script>
