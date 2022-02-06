@@ -1,2 +1,2 @@
 # Tiny-Astronomer
-This is the version 1 of our attempt to create an Intelligent Tutoring System in the field of Science, specifically Astronomy,
+Hi, our dear tiny astronomers! In this adventure, we will take a look at some of the greatest and most wonderful branch of Science, Astronomy! Let us gather and learn about the bits of our planet Earth and its neighbours! Together with my partner, Sir Prince Demabildo, we welcome you in yet another journey towards space and we are so excited for you to experience our work, and we all hope that you will enjoy the rest of this journey. So buckle up, and fasten your seatbelts because we are about to take off in 5,4,3,2,1! BLAST OFF!
