@@ -7,10 +7,20 @@
 					<strong class="score">Score: {{ this.score }}</strong>
 				</section>
 				<v-spacer style="margin-bottom: 20px"></v-spacer>
-				<div class="question">At midday, where does the sun appear?</div>
+				<div class="question">
+					What is the shape of Earth’s axis?
+				</div>
 
 				<nav>
 					<ul>
+						<li
+							@click="chooseAnswer(1)"
+							:class="
+								submitted ? (chosen1 ? 'error' : '') : chosen1 ? 'clicked' : ''
+							"
+						>
+							Straight
+						</li>
 						<li
 							@click="chooseAnswer(2)"
 							:class="
@@ -23,24 +33,15 @@
 									: ''
 							"
 						>
-							Overhead
+							Tilted
 						</li>
-						<li
-							@click="chooseAnswer(1)"
-							:class="
-								submitted ? (chosen1 ? 'error' : '') : chosen1 ? 'clicked' : ''
-							"
-						>
-							East
-						</li>
-
 						<li
 							@click="chooseAnswer(3)"
 							:class="
 								submitted ? (chosen3 ? 'error' : '') : chosen3 ? 'clicked' : ''
 							"
 						>
-							West
+							Upside Down
 						</li>
 					</ul>
 				</nav>

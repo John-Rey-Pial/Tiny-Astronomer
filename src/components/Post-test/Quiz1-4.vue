@@ -8,7 +8,7 @@
 				</section>
 				<v-spacer style="margin-bottom: 20px"></v-spacer>
 				<div class="question">
-					At midday, where does the sun appear? 
+					What is the shape of Earth’s axis?
 				</div>
 
 				<nav>
@@ -19,7 +19,7 @@
 								submitted ? (chosen1 ? 'error' : '') : chosen1 ? 'clicked' : ''
 							"
 						>
-							East
+							Straight
 						</li>
 						<li
 							@click="chooseAnswer(2)"
@@ -33,7 +33,7 @@
 									: ''
 							"
 						>
-							Overhead
+							Tilted
 						</li>
 						<li
 							@click="chooseAnswer(3)"
@@ -41,7 +41,7 @@
 								submitted ? (chosen3 ? 'error' : '') : chosen3 ? 'clicked' : ''
 							"
 						>
-							West
+							Upside Down
 						</li>
 					</ul>
 				</nav>

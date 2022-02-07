@@ -1,16 +1,29 @@
 <template>
   <div>
     <div style="display: flex">
-      <div style="width: 60%"></div>
       <div>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/VG-2FYEU5jk"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          class="video"
+        ></iframe>
+      </div>
+
+      <div class="ml-15 mt-3">
         <div class="message">
           Meet the
           <v-spacer>Developers.</v-spacer>
         </div>
         <img class="design" src="../../assets/materials/Interface Text.png" alt="design" />
-        <div style="margin-top: 30px; margin-left: 50px; font-size: 14px;">The creators that begun an initiative that 
-          <v-spacer></v-spacer>
-          adapts to the new normal </div>
+        <div style="margin-top: 30px; margin-left: 50px; font-size: 14px;">
+          The creators that begun an initiative that
+          <v-spacer></v-spacer>adapts to the new normal
+        </div>
       </div>
     </div>
   </div>
@@ -37,5 +50,9 @@ export default {};
   height: 70px;
   margin: 0;
   padding: 0;
+}
+.video{
+  margin-top: 40px;
+  margin-left:40px;
 }
 </style>

@@ -18,7 +18,7 @@
               :class="
 								submitted ? (chosen1 ? 'error' : '') : chosen1 ? 'clicked' : ''
 							"
-            >Sun</li>
+            >Moon</li>
             <li
               @click="chooseAnswer(2)"
               :class="
@@ -30,7 +30,7 @@
 									? 'clicked'
 									: ''
 							"
-            >Moon</li>
+            >Sun</li>
             <li
               @click="chooseAnswer(3)"
               :class="
