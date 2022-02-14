@@ -8,7 +8,8 @@
 				</section>
 				<v-spacer style="margin-bottom: 20px"></v-spacer>
 				<div class="question">
-						These are lumps of rocks that orbit the sun, mostly lies between Mars and Jupiter 
+					These are lumps of rocks that orbit the sun, mostly lies between Mars
+					and Jupiter
 				</div>
 
 				<nav>
@@ -20,6 +21,15 @@
 							"
 						>
 							Moon
+						</li>
+
+						<li
+							@click="chooseAnswer(3)"
+							:class="
+								submitted ? (chosen3 ? 'error' : '') : chosen3 ? 'clicked' : ''
+							"
+						>
+							Satellites
 						</li>
 						<li
 							@click="chooseAnswer(2)"
@@ -34,14 +44,6 @@
 							"
 						>
 							Asteroids
-						</li>
-						<li
-							@click="chooseAnswer(3)"
-							:class="
-								submitted ? (chosen3 ? 'error' : '') : chosen3 ? 'clicked' : ''
-							"
-						>
-							Satellites
 						</li>
 					</ul>
 				</nav>

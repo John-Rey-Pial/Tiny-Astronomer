@@ -12,22 +12,150 @@
 			<h1 style="text-align: center">{{ this.score }} / 20</h1>
 			<v-btn
 				class="purple white--text take-test-btn mt-10"
-				@click="$router.push('/intro')"
+				@click="saveProgress"
 				>Proceed and Save Progress</v-btn
 			>
 			<v-spacer class="mt-3" style="font-size: 12px; margin-left: 450px">
 			</v-spacer>
 		</div>
+
+		<v-dialog hide-overlay persistent width="300" v-model="signInDialog">
+			<v-card color="white" light>
+				<v-card-text>
+					<h3 class="dialogText">Saving Progress. Please wait.</h3>
+					<v-progress-linear
+						indeterminate
+						color="black"
+						class="mb-0 mt-5"
+					></v-progress-linear>
+				</v-card-text>
+			</v-card>
+		</v-dialog>
+
+		<div class="text-center">
+			<v-snackbar v-model="snackbar" :timeout="timeout">
+				{{ errormessage }}
+
+				<template v-slot:action="{ attrs }">
+					<v-btn color="blue" text v-bind="attrs" @click="snackbar = false">
+						Close
+					</v-btn>
+				</template>
+			</v-snackbar>
+		</div>
 	</div>
 </template>
 <script>
+	import userAPI from "../../api/userAPI";
+	import testAPI from "../../api/testAPI";
+	import lessonAPI from "../../api/lessonAPI";
 	export default {
 		components: {},
 		props: ["score"],
 		data() {
-			return {};
+			return {
+				learningLevel: "",
+				status: "",
+				signInDialog: false,
+				snackbar: false,
+				timeout: 2000,
+				errormessage: "",
+			};
 		},
-		methods: {},
+		methods: {
+			async saveProgress() {
+				try {
+					this.signInDialog = true;
+					if (this.score < 17) {
+						this.learningLevel = "Novice";
+						this.status = "Failed";
+						const updated = await lessonAPI.prototype.updateLesson(
+							"Solar System",
+							{
+								status: "In Progress",
+								progress: 0,
+							}
+						);
+
+						console.log(updated);
+					} else if ((this.score > 16) & (this.score < 20)) {
+						this.learningLevel = "Intermediate";
+						this.status = "Passed";
+						const updated = await lessonAPI.prototype.updateLesson(
+							"Solar System",
+							{
+								status: "In Progress",
+								progress: 0,
+							}
+						);
+						const updated2 = await lessonAPI.prototype.updateLesson(
+							"Motions of the Earth",
+							{
+								status: "In Progress",
+								progress: 0,
+							}
+						);
+
+						console.log(updated);
+						console.log(updated2);
+					} else {
+						this.learningLevel = "Expert";
+						this.status = "Passed";
+						const updated = await lessonAPI.prototype.updateLesson(
+							"Solar System",
+							{
+								status: "In Progress",
+								progress: 0,
+							}
+						);
+						const updated2 = await lessonAPI.prototype.updateLesson(
+							"Motions of the Earth",
+							{
+								status: "In Progress",
+								progress: 0,
+							}
+						);
+						const updated3 = await testAPI.prototype.updateTest(
+							{
+								status: "Not Yet",
+								score: 0,
+							},
+							"Post-Evaluation Test"
+						);
+
+						console.log(updated);
+						console.log(updated2);
+						console.log(updated3);
+					}
+
+					const updatedUser = await userAPI.prototype.updateUser({
+						learningLevel: this.learningLevel,
+					});
+
+					const updatedTest = await testAPI.prototype.updateTest(
+						{
+							status: this.status,
+							score: this.score,
+						},
+						"Pre-Evaluation Test"
+					);
+
+					this.signInDialog = false;
+
+					console.log(updatedUser);
+					console.log(updatedTest);
+					this.$router.push("/user");
+				} catch (error) {
+					this.signInDialog = false;
+					this.snackbar = true;
+					if (error.message == "Network Error") {
+						this.errormessage = error.message;
+					} else {
+						this.errormessage = "An error has occured";
+					}
+				}
+			},
+		},
 	};
 </script>
 <style scoped>

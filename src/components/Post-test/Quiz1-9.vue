@@ -8,7 +8,8 @@
 				</section>
 				<v-spacer style="margin-bottom: 20px"></v-spacer>
 				<div class="question">
-					What motion is performed by the earth, sun and the moon when they spin on their own axes? 
+					What motion is performed by the earth, sun and the moon when they spin
+					on their own axes?
 				</div>
 
 				<nav>
@@ -20,6 +21,15 @@
 							"
 						>
 							Revolution
+						</li>
+
+						<li
+							@click="chooseAnswer(3)"
+							:class="
+								submitted ? (chosen3 ? 'error' : '') : chosen3 ? 'clicked' : ''
+							"
+						>
+							Swirl
 						</li>
 						<li
 							@click="chooseAnswer(2)"
@@ -34,14 +44,6 @@
 							"
 						>
 							Rotation
-						</li>
-						<li
-							@click="chooseAnswer(3)"
-							:class="
-								submitted ? (chosen3 ? 'error' : '') : chosen3 ? 'clicked' : ''
-							"
-						>
-							Swirl
 						</li>
 					</ul>
 				</nav>

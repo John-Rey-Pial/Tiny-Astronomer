@@ -164,6 +164,10 @@
 					this.loading = false;
 					this.fetched = true;
 					localStorage.setItem("level", this.userData.learningLevel);
+
+					if (localStorage.getItem("level") != "TBD") {
+						this.$router.push("/intro");
+					}
 				} catch (error) {
 					this.error = true;
 				}

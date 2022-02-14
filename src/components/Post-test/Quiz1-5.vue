@@ -8,7 +8,7 @@
 				</section>
 				<v-spacer style="margin-bottom: 20px"></v-spacer>
 				<div class="question">
-					Famous for its huge system of colorful rings. 
+					Famous for its huge system of colorful rings.
 				</div>
 
 				<nav>
@@ -20,6 +20,15 @@
 							"
 						>
 							Jupiter
+						</li>
+
+						<li
+							@click="chooseAnswer(3)"
+							:class="
+								submitted ? (chosen3 ? 'error' : '') : chosen3 ? 'clicked' : ''
+							"
+						>
+							Neptune
 						</li>
 						<li
 							@click="chooseAnswer(2)"
@@ -34,14 +43,6 @@
 							"
 						>
 							Saturn
-						</li>
-						<li
-							@click="chooseAnswer(3)"
-							:class="
-								submitted ? (chosen3 ? 'error' : '') : chosen3 ? 'clicked' : ''
-							"
-						>
-							Neptune
 						</li>
 					</ul>
 				</nav>

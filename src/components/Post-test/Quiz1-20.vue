@@ -8,7 +8,7 @@
 				</section>
 				<v-spacer style="margin-bottom: 20px"></v-spacer>
 				<div class="question">
-						What change is happening when the Earth rotates? 
+					What change is happening when the Earth rotates?
 				</div>
 
 				<nav>
@@ -20,6 +20,15 @@
 							"
 						>
 							Winter and Summer
+						</li>
+
+						<li
+							@click="chooseAnswer(3)"
+							:class="
+								submitted ? (chosen3 ? 'error' : '') : chosen3 ? 'clicked' : ''
+							"
+						>
+							North and South
 						</li>
 						<li
 							@click="chooseAnswer(2)"
@@ -34,14 +43,6 @@
 							"
 						>
 							Day and Night
-						</li>
-						<li
-							@click="chooseAnswer(3)"
-							:class="
-								submitted ? (chosen3 ? 'error' : '') : chosen3 ? 'clicked' : ''
-							"
-						>
-							North and South
 						</li>
 					</ul>
 				</nav>

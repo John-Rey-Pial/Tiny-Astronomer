@@ -8,19 +8,11 @@
 				</section>
 				<v-spacer style="margin-bottom: 20px"></v-spacer>
 				<div class="question">
-						How many hours does it take for Earth to achieve full rotation? 
+					How many hours does it take for Earth to achieve full rotation?
 				</div>
 
 				<nav>
 					<ul>
-						<li
-							@click="chooseAnswer(1)"
-							:class="
-								submitted ? (chosen1 ? 'error' : '') : chosen1 ? 'clicked' : ''
-							"
-						>
-							24 days
-						</li>
 						<li
 							@click="chooseAnswer(2)"
 							:class="
@@ -35,6 +27,15 @@
 						>
 							24 hours
 						</li>
+						<li
+							@click="chooseAnswer(1)"
+							:class="
+								submitted ? (chosen1 ? 'error' : '') : chosen1 ? 'clicked' : ''
+							"
+						>
+							24 days
+						</li>
+
 						<li
 							@click="chooseAnswer(3)"
 							:class="

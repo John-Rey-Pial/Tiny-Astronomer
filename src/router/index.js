@@ -41,6 +41,8 @@ import PreTest from "../../src/components/Pre-test/Quiz1.vue";
 import PostTestIntro from "../../src/components/Post-test/QuizIntro.vue";
 import PostTest from "../../src/components/Post-test/Quiz1.vue";
 
+import User from "../components/User.vue";
+import Review from "../components/ReviewScores/ReviewScore.vue";
 Vue.use(VueRouter);
 
 const routes = [
@@ -48,6 +50,12 @@ const routes = [
 		path: "/login",
 		name: "Login",
 		component: Login,
+	},
+
+	{
+		path: "/user",
+		name: "User",
+		component: User,
 	},
 	{
 		path: "/",
@@ -59,6 +67,10 @@ const routes = [
 				path: "/pretest-intro",
 				name: "PreTest",
 				component: PreTestIntro,
+			},
+			{
+				path: "/reviewscore/:testname",
+				component: Review,
 			},
 			{
 				path: "/pretest",

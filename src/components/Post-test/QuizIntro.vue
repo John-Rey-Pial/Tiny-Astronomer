@@ -12,7 +12,7 @@
 			</h1>
 			<v-btn
 				class="purple white--text take-test-btn mt-10"
-				@click="$router.push('/pretest/')"
+				@click="$router.push('/posttest/')"
 				>Take Test</v-btn
 			>
 			<v-spacer class="mt-3" style="font-size: 12px; margin-left: 450px">

@@ -7,9 +7,7 @@
 					<strong class="score">Score: {{ this.score }}</strong>
 				</section>
 				<v-spacer style="margin-bottom: 20px"></v-spacer>
-				<div class="question">
-					At midday, where does the sun appear? 
-				</div>
+				<div class="question">At midday, where does the sun appear?</div>
 
 				<nav>
 					<ul>
@@ -20,6 +18,15 @@
 							"
 						>
 							East
+						</li>
+
+						<li
+							@click="chooseAnswer(3)"
+							:class="
+								submitted ? (chosen3 ? 'error' : '') : chosen3 ? 'clicked' : ''
+							"
+						>
+							West
 						</li>
 						<li
 							@click="chooseAnswer(2)"
@@ -34,14 +41,6 @@
 							"
 						>
 							Overhead
-						</li>
-						<li
-							@click="chooseAnswer(3)"
-							:class="
-								submitted ? (chosen3 ? 'error' : '') : chosen3 ? 'clicked' : ''
-							"
-						>
-							West
 						</li>
 					</ul>
 				</nav>

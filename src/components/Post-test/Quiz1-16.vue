@@ -8,7 +8,8 @@
 				</section>
 				<v-spacer style="margin-bottom: 20px"></v-spacer>
 				<div class="question">
-						These are planets made mostly of rock and metal. On the surface is a thin layer of solid rock called the crust. 
+					These are planets made mostly of rock and metal. On the surface is a
+					thin layer of solid rock called the crust.
 				</div>
 
 				<nav>
@@ -20,6 +21,15 @@
 							"
 						>
 							Gas Giants
+						</li>
+
+						<li
+							@click="chooseAnswer(3)"
+							:class="
+								submitted ? (chosen3 ? 'error' : '') : chosen3 ? 'clicked' : ''
+							"
+						>
+							Plasma Dwarves
 						</li>
 						<li
 							@click="chooseAnswer(2)"
@@ -34,14 +44,6 @@
 							"
 						>
 							Rocky Planets
-						</li>
-						<li
-							@click="chooseAnswer(3)"
-							:class="
-								submitted ? (chosen3 ? 'error' : '') : chosen3 ? 'clicked' : ''
-							"
-						>
-							Plasma Dwarves
 						</li>
 					</ul>
 				</nav>

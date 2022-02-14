@@ -7,20 +7,10 @@
 					<strong class="score">Score: {{ this.score }}</strong>
 				</section>
 				<v-spacer style="margin-bottom: 20px"></v-spacer>
-				<div class="question">
-					The Earth’s only natural satellite. 
-				</div>
+				<div class="question">The Earth’s only natural satellite.</div>
 
 				<nav>
 					<ul>
-						<li
-							@click="chooseAnswer(1)"
-							:class="
-								submitted ? (chosen1 ? 'error' : '') : chosen1 ? 'clicked' : ''
-							"
-						>
-							Sun
-						</li>
 						<li
 							@click="chooseAnswer(2)"
 							:class="
@@ -35,6 +25,15 @@
 						>
 							Moon
 						</li>
+						<li
+							@click="chooseAnswer(1)"
+							:class="
+								submitted ? (chosen1 ? 'error' : '') : chosen1 ? 'clicked' : ''
+							"
+						>
+							Sun
+						</li>
+
 						<li
 							@click="chooseAnswer(3)"
 							:class="

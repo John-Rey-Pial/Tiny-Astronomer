@@ -8,7 +8,8 @@
 				</section>
 				<v-spacer style="margin-bottom: 20px"></v-spacer>
 				<div class="question">
-					A rocky planet half the size of the Earth. They share some similarities with Earth, but this planet is cold and dry. 
+					A rocky planet half the size of the Earth. They share some
+					similarities with Earth, but this planet is cold and dry.
 				</div>
 
 				<nav>
@@ -20,6 +21,15 @@
 							"
 						>
 							Mercury
+						</li>
+
+						<li
+							@click="chooseAnswer(3)"
+							:class="
+								submitted ? (chosen3 ? 'error' : '') : chosen3 ? 'clicked' : ''
+							"
+						>
+							Jupiter
 						</li>
 						<li
 							@click="chooseAnswer(2)"
@@ -34,14 +44,6 @@
 							"
 						>
 							Mars
-						</li>
-						<li
-							@click="chooseAnswer(3)"
-							:class="
-								submitted ? (chosen3 ? 'error' : '') : chosen3 ? 'clicked' : ''
-							"
-						>
-							Jupiter
 						</li>
 					</ul>
 				</nav>

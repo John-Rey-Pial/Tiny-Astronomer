@@ -8,19 +8,12 @@
 				</section>
 				<v-spacer style="margin-bottom: 20px"></v-spacer>
 				<div class="question">
-					One of the five dwarf planets in our Solar System. It is a tiny world of rock and ice, only two-thirds the size of Earth’s moon. 
+					One of the five dwarf planets in our Solar System. It is a tiny world
+					of rock and ice, only two-thirds the size of Earth’s moon.
 				</div>
 
 				<nav>
 					<ul>
-						<li
-							@click="chooseAnswer(1)"
-							:class="
-								submitted ? (chosen1 ? 'error' : '') : chosen1 ? 'clicked' : ''
-							"
-						>
-							Mercury
-						</li>
 						<li
 							@click="chooseAnswer(2)"
 							:class="
@@ -35,6 +28,15 @@
 						>
 							Pluto
 						</li>
+						<li
+							@click="chooseAnswer(1)"
+							:class="
+								submitted ? (chosen1 ? 'error' : '') : chosen1 ? 'clicked' : ''
+							"
+						>
+							Mercury
+						</li>
+
 						<li
 							@click="chooseAnswer(3)"
 							:class="

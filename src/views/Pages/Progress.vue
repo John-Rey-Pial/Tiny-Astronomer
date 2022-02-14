@@ -38,7 +38,7 @@
 							</div>
 							<div class="progressbar">
 								<v-progress-linear
-									:v-model="tests[0].status == 'Not Yet' ? 0 : 100"
+									v-model="pretest"
 									color="#1a237e"
 									height="25"
 									rounded
@@ -53,6 +53,7 @@
 							<v-btn
 								color="#9c27b0"
 								class="white--text"
+								:to="/reviewscore/ + tests[0].name"
 								v-if="tests[0].status != 'Not Yet'"
 								>View Score</v-btn
 							>
@@ -83,7 +84,7 @@
 							</div>
 							<div class="progressbar">
 								<v-progress-linear
-									:v-model="lessons[0].progress"
+									v-model="lesson1"
 									color="#1a237e"
 									height="25"
 									rounded
@@ -105,6 +106,7 @@
 							<v-btn
 								color="#9c27b0"
 								class="white--text"
+								:to="/reviewscore/ + tests[1].name"
 								v-if="
 									tests[1].status == 'Passed' || tests[1].status == 'Failed'
 								"
@@ -115,6 +117,7 @@
 								color="#9c27b0"
 								class="white--text"
 								v-if="lessons[0].status == 'In Progress'"
+								to="/solar"
 								>Take Lecture</v-btn
 							>
 
@@ -123,8 +126,9 @@
 								class="white--text"
 								v-if="
 									lessons[0].status == 'Completed' &&
-									tests[2].status == 'Not Yet'
+									tests[1].status == 'Not Yet'
 								"
+								to="/quiz2/intro"
 								>Take Test</v-btn
 							>
 						</div>
@@ -145,7 +149,7 @@
 							</div>
 							<div class="progressbar">
 								<v-progress-linear
-									:v-model="lessons[1].progress"
+									v-model="lesson2"
 									color="#1a237e"
 									height="25"
 									rounded
@@ -167,6 +171,7 @@
 							<v-btn
 								color="#9c27b0"
 								class="white--text"
+								:to="/reviewscore/ + tests[2].name"
 								v-if="
 									tests[2].status == 'Passed' || tests[2].status == 'Failed'
 								"
@@ -177,6 +182,7 @@
 								color="#9c27b0"
 								class="white--text"
 								v-if="lessons[1].status == 'In Progress'"
+								to="/motions"
 								>Take Lecture</v-btn
 							>
 
@@ -187,6 +193,7 @@
 									lessons[1].status == 'Completed' &&
 									tests[2].status == 'Not Yet'
 								"
+								to="/quiz1/intro"
 								>Take Test</v-btn
 							>
 						</div>
@@ -218,11 +225,7 @@
 							</div>
 							<div class="progressbar">
 								<v-progress-linear
-									:v-model="
-										tests[3].status == 'Not Yet' || tests[3].status == 'Locked'
-											? 0
-											: 100
-									"
+									v-model="posttest"
 									color="#1a237e"
 									height="25"
 									rounded
@@ -244,8 +247,9 @@
 							<v-btn
 								color="#9c27b0"
 								class="white--text"
+								:to="/reviewscore/ + tests[3].name"
 								v-if="
-									tests[3].status == 'Passed' || tests[2].status == 'Failed'
+									tests[3].status == 'Passed' || tests[3].status == 'Failed'
 								"
 								>View Score</v-btn
 							>
@@ -254,6 +258,7 @@
 								color="#9c27b0"
 								class="white--text"
 								v-if="tests[3].status == 'Not Yet'"
+								to="/posttest-intro"
 								>Take Test</v-btn
 							>
 						</div>
@@ -277,6 +282,10 @@
 			fetched: false,
 			loading: true,
 			error: false,
+			pretest: 0,
+			lesson1: 0,
+			lesson2: 0,
+			posttest: 0,
 		}),
 		async created() {
 			if (!localStorage.getItem("token")) {
@@ -291,10 +300,25 @@
 
 					const lessons = await lessonAPI.prototype.getAllLessons();
 					this.lessons = lessons.data.lessons;
-
+					this.pretest =
+						this.tests[0].status == "Not Yet" ||
+						this.tests[0].status == "Locked"
+							? 0
+							: 100;
+					this.tests[0].status == "Not Yet" || this.tests[0].status == "Locked"
+						? 0
+						: 100;
+					this.lesson1 = this.lessons[0].progress;
+					this.lesson2 = this.lessons[1].progress;
+					this.posttest =
+						this.tests[3].status == "Not Yet" ||
+						this.tests[3].status == "Locked"
+							? 0
+							: 100;
 					this.loading = false;
 					this.fetched = true;
 				} catch (error) {
+					console.log(error);
 					this.error = true;
 				}
 			}

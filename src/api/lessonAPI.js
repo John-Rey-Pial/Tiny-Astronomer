@@ -1,5 +1,5 @@
 import axios from "axios";
-const url = "http://localhost:3000/api/lessons";
+const url = "https://tiny-astro.herokuapp.com/api/lessons";
 axios.defaults.headers.common["auth-token"] =
 	"Bearer " + localStorage.getItem("token");
 
@@ -11,16 +11,8 @@ export default class API {
 		return lessons;
 	}
 
-	async updateChapter(lessonid, chapnum, updatedChapter) {
-		const chapter = await axios.patch(
-			url + "/" + lessonid + "/" + chapnum,
-			updatedChapter
-		);
-		return chapter;
-	}
-
-	async updateLesson(lessonid, updatedLesson) {
-		const chapter = await axios.patch(url + "/" + lessonid, updatedLesson);
+	async updateLesson(lessonName, updatedLesson) {
+		const chapter = await axios.patch(url + "/" + lessonName, updatedLesson);
 		return chapter;
 	}
 }

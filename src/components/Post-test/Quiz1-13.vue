@@ -7,20 +7,10 @@
 					<strong class="score">Score: {{ this.score }}</strong>
 				</section>
 				<v-spacer style="margin-bottom: 20px"></v-spacer>
-				<div class="question">
-						How many days makes one complete revolution?   
-				</div>
+				<div class="question">How many days makes one complete revolution?</div>
 
 				<nav>
 					<ul>
-						<li
-							@click="chooseAnswer(1)"
-							:class="
-								submitted ? (chosen1 ? 'error' : '') : chosen1 ? 'clicked' : ''
-							"
-						>
-							24 hours
-						</li>
 						<li
 							@click="chooseAnswer(2)"
 							:class="
@@ -35,6 +25,15 @@
 						>
 							365 1/4 days
 						</li>
+						<li
+							@click="chooseAnswer(1)"
+							:class="
+								submitted ? (chosen1 ? 'error' : '') : chosen1 ? 'clicked' : ''
+							"
+						>
+							24 hours
+						</li>
+
 						<li
 							@click="chooseAnswer(3)"
 							:class="

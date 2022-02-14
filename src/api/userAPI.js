@@ -1,5 +1,5 @@
 import axios from "axios";
-const url = "http://localhost:3000/api/users";
+const url = "https://tiny-astro.herokuapp.com/api/users";
 axios.defaults.headers.common["auth-token"] =
 	"Bearer " + localStorage.getItem("token");
 
