@@ -54,7 +54,7 @@
 						class="indigo darken-4 white--text"
 						style="text-transform: capitalize; width: 240px"
 						@click="$router.push('/motions')"
-						:disabled="user.learningLevel != 'Expert'"
+						:disabled="user.learningLevel != 'Intermediate'"
 						>Start Course</v-btn
 					>
 					<section style="font-size: 11px; margin-top: 10px">

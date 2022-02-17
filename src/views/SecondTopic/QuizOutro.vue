@@ -109,7 +109,7 @@
 
 					this.signInDialog = false;
 
-					this.$router.push("/user");
+					this.$router.push("/content");
 				} catch (error) {
 					this.signInDialog = false;
 					this.snackbar = true;
