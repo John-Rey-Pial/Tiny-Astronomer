@@ -18,7 +18,8 @@
           Saturn is the sixth planet from the Sun, and the second largest
           planet in our Solar System after Jupiter. It is famous for its
           huge system of colorful rings. Saturn has a large family of more
-          than 60 moons. Like Jupiter, Uranus, and Neptune, Saturn is a
+          than 60 moons. It is also the lightest planet in the solar system.
+          Like Jupiter, Uranus, and Neptune, Saturn is a
           gas giant – a huge ball of gas and liquid with a small solid
           core at its very center. Saturn was named after the Roman god
           of agriculture and wealth.

@@ -8,7 +8,7 @@
 				</section>
 				<v-spacer style="margin-bottom: 20px"></v-spacer>
 				<div class="question">
-					What do we call the spinning movement of the Earth in its orbit?
+					What do we call the spinning movement of the Earth in its axis?
 				</div>
 
 				<nav>

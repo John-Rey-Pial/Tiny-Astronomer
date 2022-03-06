@@ -5,7 +5,7 @@
       <v-spacer></v-spacer>
       <img id="paulo" src="../assets/materials/Paulo.png" alt="Paulo" />
       <span id="text" class="blue lighten-5 blue--text">
-        <Strong>Welcome to Tiny Astronomers! </Strong>The developers has something to tell you. Click the video below.
+        <Strong>Welcome to Tiny Astronomers! </Strong> Let us learn and explore the beauty of space!
       </span>
     </v-flex>
   </div>

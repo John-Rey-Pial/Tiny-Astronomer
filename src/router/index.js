@@ -167,6 +167,7 @@ const routes = [
 				name: "Solar System",
 				component: Solar1,
 			},
+			
 			{
 				path: "/solar/2",
 				name: "Solar System",

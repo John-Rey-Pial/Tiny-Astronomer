@@ -30,13 +30,13 @@
 									<strong>The Rocky Planets</strong>
 								</span>
 							</li>
-							<li @click="$router.push('/solar/3')">
+							<li @click="$router.push('/solar/7')">
 								<strong>4</strong>
 								<span style="margin-left: 50px">
 									<strong>Gas Giants</strong>
 								</span>
 							</li>
-							<li @click="$router.push('/solar/4')">
+							<li @click="$router.push('/solar/12')">
 								<strong>5</strong>
 								<span style="margin-left: 50px">
 									<strong>Dwarf Planet and Space Objects</strong>

@@ -1,16 +1,11 @@
 <template>
   <div>
     <div style="display: flex;">
+      
       <section style="margin-top: 20px; margin-left: 10px">
-        <iframe
-          width="500"
-          height="300"
-          src="https://www.youtube.com/embed/Dvhl891zGqU"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
+        <div
+        ><img src="../../../src/assets/materials/rocky.jpg" style="width: 450px"/>
+        </div>
         <span class="caption" style="color: gray">Source: &copy; Crashcourse Kids, 2016</span>
       </section>
       <section style="margin-right: 70px; margin-top: 20px; margin-left: 50px; text-align: justify">
